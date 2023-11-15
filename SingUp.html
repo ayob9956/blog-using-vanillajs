@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SingUp</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgba(217, 222, 251, 0.556);
+       
+      }
+
+      .cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.616);
+        background-color: rgba(113, 183, 148, 0.315);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="blog.html">  <img
+          src="data:image/png;base64,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"
+          height="40"
+          alt="MDB Logo"
+          loading="lazy"
+          style="border-radius: 50px;"
+        /></a>
+          <button class="navbar-toggler" style="color: aliceblue;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item px-1" style="color: aliceblue;">Home</li>
+                  <li class="nav-item px-1" style="color: aliceblue;">About</li>
+                  <li class="nav-item px-1" style="color: aliceblue;">Contact</li>
+                  <li class="nav-item px-1" style="color: aliceblue;">Blog</li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <header>
+      <!-- Background image -->
+      <div
+        class="p-5 text-center bg-image"
+        style="
+          background-image: url('https://img.freepik.com/free-photo/blue-surface-with-study-tools_23-2147864592.jpg?w=1060&t=st=1700073269~exp=1700073869~hmac=9c0d7c416744bebbf09524f6e378a5717b528692cdd3900dfc3e3d45fc4c01f4');
+          height: 84vh;
+        "
+      >
+        <div
+          class="mask"
+          style="
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="cont">
+            <h2 style="color: aliceblue;">SingUp</h2>
+            <input id="name" type="text" placeholder="Your Name:" />
+            <input id="email" type="email" placeholder="Email:" />
+            <input id="password" type="password" placeholder="password:" />
+
+            <div>
+              <button id="btn" class="btn mb-1" type="button" style="color: aliceblue; background-color: rgba(240, 248, 255, 0.669);">SingUp</button>
+              <p style="color: aliceblue;">I have acount <a href="Login.html">LogIn</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Background image -->
+      <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Ayoub Website 2023</p></div>
+    </footer>
+    </header>
+  </body>
+
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+  ></script>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+
+      let nameValid = /^[A-Za-z]{5,}$/;
+      let emailValid = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+      let passwordValid = /^\d{6,}$/;
+
+      if (name.value === "" || email.value === "" || password.value === "") {
+        alert("input in empty");
+      } else if (!nameValid.test(name.value)) {
+        alert("name is only character and more than 5");
+      } else if (!email.value.match(emailValid)) {
+        alert("email is invalled");
+      } else if (!password.value.match(passwordValid)) {
+        alert("password is only number and more than 6");
+      } else {
+        fetch("https://655127797d203ab6626e943b.mockapi.io/users", {
+          method: "POST",
+          body: JSON.stringify({
+            name: name.value,
+            email: email.value,
+            password: password.value,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => (window.location.href = "Login.html"));
+      }
+    });
+  </script>
+</html>
